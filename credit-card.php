@@ -1,11 +1,11 @@
 <?php
 
-class CreditCard extends User {
+class CreditCard {
     private $number;
-    private $expiryDate;
+    public $expiryDate;
     private $securityCode;
 
-    public function __construct(int $cardNumber, int $cardExpiryDate, int $cardSecurityCode) {
+    public function __construct(int $cardNumber, string $cardExpiryDate, int $cardSecurityCode) {
         $this->number = $cardNumber;
         $this->expiryDate = $cardExpiryDate;
         $this->securityCode = $cardSecurityCode;

@@ -47,3 +47,29 @@ echo '<br />';
 $boolazon->removeProduct($laptop);
 
 echo $boolazon->getProducts();
+
+echo '<br />';
+
+$mattia = new User('Mattia', 'Ferrari', false);
+
+$creditCard = new CreditCard(47384, '0220', 21);
+
+$mattia->addCreditCard($creditCard);
+
+echo '<br />';
+
+$mattia->addToCart($smartphone);
+$mattia->addToCart($lipstick);
+
+var_dump($mattia->cart);
+
+$mattia->buy();
+
+var_dump($lipstick);
+
+$mario = new User('Mario', 'Rossi', true);
+
+$mario->addToCart($smartphone);
+$mario->addToCart($lipstick);
+
+$mario->buy();

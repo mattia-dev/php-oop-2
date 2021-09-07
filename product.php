@@ -3,7 +3,7 @@
 class Product {
 
     public $label;
-    protected $price;
+    public $price;
     protected $availableItems;
     public $description;
     public $images = [];
@@ -18,6 +18,10 @@ class Product {
 
     public function getPrice() {
         return $this->price;
+    }
+
+    public function changeAvailableItems() {
+        $this->availableItems -= 1;
     }
 
 }
